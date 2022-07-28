@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "module": "dist/words-apilib.esm.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10.4.0"
+  },
+  "scripts": {
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint src",
+    "prepare": "tsdx build"
+  },
+  "peerDependencies": {},
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "words-apilib",
+  "description": "Words API lets you retrieve information about English words, including definitions, synonyms, rhymes, pronunciation, syllables, and frequency of usage. It also can tell you about relationships between words, for instance that “math” has categories like “algebra” and “geometry”, or that a “finger” is part of a “hand”.",
+  "author": "Muhammad Sufyan",
+  "devDependencies": {
+    "stream-equal": "^2.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@apimatic/core": "^0.7.6",
+    "@apimatic/schema": "^0.6.0"
+  },
+  "bugs": {
+    "email": "muhammad.sufyan@apimatic.io"
+  }
+}
