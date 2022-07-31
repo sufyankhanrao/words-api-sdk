@@ -11,7 +11,7 @@ This model contains pronunciation details of a specific word.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `all` | `string` | Required | The pronunciation of the word. |
+| `all` | `string \| undefined` | Optional | The pronunciation of the word. |
 | `noun` | `string \| undefined` | Optional | The noun pronunciation of the word. |
 | `verb` | `string \| undefined` | Optional | The verb pronunciation of the word. |
 

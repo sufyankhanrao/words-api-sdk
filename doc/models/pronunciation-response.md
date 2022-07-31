@@ -11,8 +11,8 @@ This custom type contains response for pronunciation endpoint.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `word` | `string` | Required | The word that is searched. |
-| `pronunciation` | [`PronunciationDetails`](../../doc/models/pronunciation-details.md) | Required | This model contains pronunciation details of a specific word. |
+| `word` | `string \| undefined` | Optional | The word that is searched. |
+| `pronunciation` | [`PronunciationDetails \| undefined`](../../doc/models/pronunciation-details.md) | Optional | This model contains pronunciation details of a specific word. |
 
 ## Example (as JSON)
 

@@ -11,8 +11,8 @@ This custom type contains response for examples endpoint.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `word` | `string` | Required | The word that is searched. |
-| `examples` | `string[]` | Required | The usage examples of the searched word. |
+| `word` | `string \| undefined` | Optional | The word that is searched. |
+| `examples` | `string[] \| undefined` | Optional | The usage examples of the searched word. |
 
 ## Example (as JSON)
 

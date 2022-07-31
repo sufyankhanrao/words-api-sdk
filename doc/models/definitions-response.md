@@ -11,8 +11,8 @@ This custom type contains response for definitions endpoint.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `word` | `string` | Required | The word that is searched. |
-| `definition` | `string[]` | Required | The definitions of the searched word. |
+| `word` | `string \| undefined` | Optional | The word that is searched. |
+| `definition` | `string[] \| undefined` | Optional | The definitions of the searched word. |
 
 ## Example (as JSON)
 

@@ -7,6 +7,7 @@
 import {
   array,
   lazy,
+  nullable,
   number,
   object,
   optional,
@@ -20,21 +21,27 @@ import { WordDetails, wordDetailsSchema } from './wordDetails';
 /** This custom type contains the response for word API. */
 export interface WordResponse {
   /** The word that is searched. */
-  word: string;
+  word?: string | null;
   /** This field contains detailed information of the word. */
-  results: WordDetails[];
+  results?: WordDetails[] | null;
   /** This model contains pronunciation details of a specific word. */
-  pronunciation?: unknown;
+  pronunciation?: unknown | null;
   /** The frequency of the word usage. */
-  frequency?: number;
+  frequency?: number | null;
   /** This custom type contains the syllable details for word API. */
-  syllables?: SyllableDetails;
+  syllables?: SyllableDetails | null;
 }
 
 export const wordResponseSchema: Schema<WordResponse> = object({
-  word: ['word', string()],
-  results: ['results', array(lazy(() => wordDetailsSchema))],
-  pronunciation: ['pronunciation', optional(unknown())],
-  frequency: ['frequency', optional(number())],
-  syllables: ['syllables', optional(lazy(() => syllableDetailsSchema))],
+  word: ['word', optional(nullable(string()))],
+  results: [
+    'results',
+    optional(nullable(array(lazy(() => wordDetailsSchema)))),
+  ],
+  pronunciation: ['pronunciation', optional(nullable(unknown()))],
+  frequency: ['frequency', optional(nullable(number()))],
+  syllables: [
+    'syllables',
+    optional(nullable(lazy(() => syllableDetailsSchema))),
+  ],
 });

@@ -11,8 +11,8 @@ This custom type contains the response for word API.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `word` | `string` | Required | The word that is searched. |
-| `results` | [`WordDetails[]`](../../doc/models/word-details.md) | Required | This field contains detailed information of the word. |
+| `word` | `string \| undefined` | Optional | The word that is searched. |
+| `results` | [`WordDetails[] \| undefined`](../../doc/models/word-details.md) | Optional | This field contains detailed information of the word. |
 | `pronunciation` | `unknown \| undefined` | Optional | This model contains pronunciation details of a specific word. |
 | `frequency` | `number \| undefined` | Optional | The frequency of the word usage. |
 | `syllables` | [`SyllableDetails \| undefined`](../../doc/models/syllable-details.md) | Optional | This custom type contains the syllable details for word API. |
