@@ -11,8 +11,8 @@ This custom type contains response for frequency endpoint.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `word` | `string` | Required | The word that is searched. |
-| `frequency` | [`FrequencyDetails`](../../doc/models/frequency-details.md) | Required | This model contains frequency details of a specific word. |
+| `word` | `string \| undefined` | Optional | The word that is searched. |
+| `frequency` | [`FrequencyDetails \| undefined`](../../doc/models/frequency-details.md) | Optional | This model contains frequency details of a specific word. |
 
 ## Example (as JSON)
 

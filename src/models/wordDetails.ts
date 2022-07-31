@@ -9,42 +9,42 @@ import { array, nullable, object, optional, Schema, string } from '../schema';
 /** This custom type stores word information. */
 export interface WordDetails {
   /** Explains the definition of the word. */
-  definition?: string;
+  definition?: string | null;
   /** Explains what part of speech the word is. */
   partOfSpeech?: string | null;
   /** The list of synonyms. */
-  synonyms?: string[];
+  synonyms?: string[] | null;
   /** List of words that are more general than the searched word. */
-  typeOf?: string[];
+  typeOf?: string[] | null;
   /** More specific examples of types of searched word. */
-  hasTypes?: string[];
+  hasTypes?: string[] | null;
   /** The derivation if any. */
-  derivation?: string[];
+  derivation?: string[] | null;
   /** The usage examples of word if any. */
-  examples?: string[];
+  examples?: string[] | null;
   /** List of antonyms for the searched word. */
-  antonyms?: string[];
+  antonyms?: string[] | null;
   /** The verb group of the searched word. */
-  verbGroup?: string[];
+  verbGroup?: string[] | null;
   /** Words that are parts of the searched word. */
-  hasParts?: string[];
+  hasParts?: string[] | null;
   /** Words that are substances of the searched word. */
-  hasSubstances?: string[];
+  hasSubstances?: string[] | null;
   /** Words that are implied by the searched word. Usually used for verbs. */
-  entails?: string[];
+  entails?: string[] | null;
 }
 
 export const wordDetailsSchema: Schema<WordDetails> = object({
-  definition: ['definition', optional(string())],
+  definition: ['definition', optional(nullable(string()))],
   partOfSpeech: ['partOfSpeech', optional(nullable(string()))],
-  synonyms: ['synonyms', optional(array(string()))],
-  typeOf: ['typeOf', optional(array(string()))],
-  hasTypes: ['hasTypes', optional(array(string()))],
-  derivation: ['derivation', optional(array(string()))],
-  examples: ['examples', optional(array(string()))],
-  antonyms: ['antonyms', optional(array(string()))],
-  verbGroup: ['verbGroup', optional(array(string()))],
-  hasParts: ['hasParts', optional(array(string()))],
-  hasSubstances: ['hasSubstances', optional(array(string()))],
-  entails: ['entails', optional(array(string()))],
+  synonyms: ['synonyms', optional(nullable(array(string())))],
+  typeOf: ['typeOf', optional(nullable(array(string())))],
+  hasTypes: ['hasTypes', optional(nullable(array(string())))],
+  derivation: ['derivation', optional(nullable(array(string())))],
+  examples: ['examples', optional(nullable(array(string())))],
+  antonyms: ['antonyms', optional(nullable(array(string())))],
+  verbGroup: ['verbGroup', optional(nullable(array(string())))],
+  hasParts: ['hasParts', optional(nullable(array(string())))],
+  hasSubstances: ['hasSubstances', optional(nullable(array(string())))],
+  entails: ['entails', optional(nullable(array(string())))],
 });

@@ -11,9 +11,9 @@ This model contains frequency details of a specific word.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `zipf` | `number` | Required | Explains the zipf score. |
-| `perMillion` | `number` | Required | Explains the perMillion score. |
-| `diversity` | `number` | Required | Explains the diversity score. |
+| `zipf` | `number \| undefined` | Optional | Explains the zipf score. |
+| `perMillion` | `number \| undefined` | Optional | Explains the perMillion score. |
+| `diversity` | `number \| undefined` | Optional | Explains the diversity score. |
 
 ## Example (as JSON)
 

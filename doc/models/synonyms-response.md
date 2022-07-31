@@ -11,8 +11,8 @@ This custom type contains response for synonyms endpoint.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `word` | `string` | Required | The word that is searched. |
-| `synonyms` | `string[]` | Required | The synonyms of the searched word. |
+| `word` | `string \| undefined` | Optional | The word that is searched. |
+| `synonyms` | `string[] \| undefined` | Optional | The synonyms of the searched word. |
 
 ## Example (as JSON)
 
